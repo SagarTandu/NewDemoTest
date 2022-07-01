@@ -7,9 +7,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="SF.test.Invalidemail"/>
-      <class name="SF.test.Invalidphone"/>
-      <class name="SF.test.Blankcred"/>
-      <class name="SF.test.Validemail"/>
+    
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
