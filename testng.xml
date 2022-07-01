@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<packages>
+<package name="SF.test"></package>
+</packages>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="SF.test.Invalidemail"/>
+      <class name="SF.test.Invalidphone"/>
+      <class name="SF.test.Blankcred"/>
+      <class name="SF.test.Validemail"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

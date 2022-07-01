@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="17170" started-at="2022-07-01T13:30:34 IST" finished-at="2022-07-01T13:30:51 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="17170" started-at="2022-07-01T13:30:34 IST" finished-at="2022-07-01T13:30:51 IST">
+      <class name="SF.test.Invalidphone">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:SF.test.Invalidphone@a38d7a3]" name="initialize" is-config="true" duration-ms="1261" started-at="2022-07-01T13:30:32 IST" finished-at="2022-07-01T13:30:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="login()[pri:0, instance:SF.test.Invalidphone@a38d7a3]" name="login" duration-ms="2818" started-at="2022-07-01T13:30:38 IST" finished-at="2022-07-01T13:30:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="text()[pri:0, instance:SF.test.Invalidphone@a38d7a3]" name="text" duration-ms="180" started-at="2022-07-01T13:30:41 IST" finished-at="2022-07-01T13:30:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- text -->
+        <test-method status="PASS" signature="close()[pri:0, instance:SF.test.Invalidphone@a38d7a3]" name="close" is-config="true" duration-ms="779" started-at="2022-07-01T13:30:53 IST" finished-at="2022-07-01T13:30:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- SF.test.Invalidphone -->
+      <class name="SF.test.Validemail">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:SF.test.Validemail@63440df3]" name="initialize" is-config="true" duration-ms="1253" started-at="2022-07-01T13:30:33 IST" finished-at="2022-07-01T13:30:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="login()[pri:0, instance:SF.test.Validemail@63440df3]" name="login" duration-ms="4938" started-at="2022-07-01T13:30:45 IST" finished-at="2022-07-01T13:30:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="welcome()[pri:0, instance:SF.test.Validemail@63440df3]" name="welcome" duration-ms="1348" started-at="2022-07-01T13:30:50 IST" finished-at="2022-07-01T13:30:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- welcome -->
+        <test-method status="PASS" signature="close()[pri:0, instance:SF.test.Validemail@63440df3]" name="close" is-config="true" duration-ms="750" started-at="2022-07-01T13:30:54 IST" finished-at="2022-07-01T13:30:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- SF.test.Validemail -->
+      <class name="SF.test.Invalidemail">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:SF.test.Invalidemail@262b2c86]" name="initialize" is-config="true" duration-ms="1322" started-at="2022-07-01T13:30:30 IST" finished-at="2022-07-01T13:30:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="login()[pri:0, instance:SF.test.Invalidemail@262b2c86]" name="login" duration-ms="4181" started-at="2022-07-01T13:30:34 IST" finished-at="2022-07-01T13:30:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="text()[pri:0, instance:SF.test.Invalidemail@262b2c86]" name="text" duration-ms="170" started-at="2022-07-01T13:30:38 IST" finished-at="2022-07-01T13:30:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- text -->
+        <test-method status="PASS" signature="close()[pri:0, instance:SF.test.Invalidemail@262b2c86]" name="close" is-config="true" duration-ms="731" started-at="2022-07-01T13:30:52 IST" finished-at="2022-07-01T13:30:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- SF.test.Invalidemail -->
+      <class name="SF.test.Blankcred">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:SF.test.Blankcred@77f99a05]" name="initialize" is-config="true" duration-ms="2733" started-at="2022-07-01T13:30:27 IST" finished-at="2022-07-01T13:30:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="login()[pri:0, instance:SF.test.Blankcred@77f99a05]" name="login" duration-ms="3432" started-at="2022-07-01T13:30:41 IST" finished-at="2022-07-01T13:30:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="text()[pri:0, instance:SF.test.Blankcred@77f99a05]" name="text" duration-ms="55" started-at="2022-07-01T13:30:45 IST" finished-at="2022-07-01T13:30:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- text -->
+        <test-method status="PASS" signature="close()[pri:0, instance:SF.test.Blankcred@77f99a05]" name="close" is-config="true" duration-ms="848" started-at="2022-07-01T13:30:51 IST" finished-at="2022-07-01T13:30:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- SF.test.Blankcred -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
