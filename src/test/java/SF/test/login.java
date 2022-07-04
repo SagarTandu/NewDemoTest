@@ -25,11 +25,12 @@ public void initialize() {
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	driver=new ChromeDriver();
 	driver.manage().window().maximize();
+	driver.get(url);
+
 }
 
 @Test (priority=0)
 public void blank() {
-	driver.get(url);
 	driver.findElement(By.name("identifier")).sendKeys(" ");
 	driver.findElement(By.xpath("//span[text()='Next']")).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -61,12 +62,6 @@ public void invalidphone() {
 	String text = driver.findElement(By.xpath("//div[@class='o6cuMc']")).getText();
 	System.out.println(text);
 	Assert.assertEquals("Enter a valid email or phone number", text);
-}
-
-
-@AfterSuite
-public void close() {
-	driver.quit();
-  }
+    }
 	
 }

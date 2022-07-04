@@ -6,13 +6,12 @@
   </packages>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SF.test.login">
+      <class name="SF.test.Compose">
         <methods>
-          <include name="initialize"/>
-          <include name="invalidphone"/>
+          <include name="composeemail"/>
           <include name="close"/>
         </methods>
-      </class> <!-- SF.test.login -->
+      </class> <!-- SF.test.Compose -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

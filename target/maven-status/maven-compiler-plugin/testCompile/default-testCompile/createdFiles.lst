@@ -1,4 +1,2 @@
-SF\test\Invalidphone.class
-SF\test\Validemail.class
-SF\test\Blankcred.class
-SF\test\Invalidemail.class
+SF\test\Compose.class
+SF\test\login.class
