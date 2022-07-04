@@ -30,9 +30,7 @@ public void initialize() {
 
 @Test (priority=0)
 public void blank() {
-	
-	//System.setProperty("webdriver.chrome.driver", "C:/Users/sagar.tandu/Desktop/chromedriver_win32/chromedriver.exe");
-	WebDriverManager.edgedriver().setup();
+	System.setProperty("webdriver.edge.driver", "C:\\Users\\sagar.tandu\\Downloads\\edgedriver_win64\\msedgedriver.exe");
 	driver = new EdgeDriver();
 	driver.manage().window().maximize();
 	driver.get(url);
@@ -48,9 +46,8 @@ public void blank() {
 
 @Test (priority=1)
 public void invalidemail() {
-	WebDriverManager.edgedriver().setup();
+	System.setProperty("webdriver.edge.driver", "C:\\Users\\sagar.tandu\\Downloads\\edgedriver_win64\\msedgedriver.exe");
 	driver = new EdgeDriver();
-	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	driver.manage().window().maximize();
 	driver.get(url);
 	//driver.navigate().to(url);
@@ -65,9 +62,8 @@ public void invalidemail() {
 
 @Test (priority=2)
 public void invalidphone() {
-	WebDriverManager.edgedriver().setup();
+	System.setProperty("webdriver.edge.driver", "C:\\Users\\sagar.tandu\\Downloads\\edgedriver_win64\\msedgedriver.exe");
 	driver = new EdgeDriver();
-	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	driver.manage().window().maximize();
 	driver.get(url);
 	//driver.navigate().to(url);

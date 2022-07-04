@@ -32,8 +32,7 @@ public class Compose {
 	@Test
 	public void composeemail() {
 		
-		 //System.setProperty("webdriver.chrome.driver", "C:/Users/sagar.tandu/Desktop/chromedriver_win32/chromedriver.exe");
-		WebDriverManager.edgedriver().setup();
+		System.setProperty("webdriver.edge.driver", "C:\\Users\\sagar.tandu\\Downloads\\edgedriver_win64\\msedgedriver.exe");
 		driver = new EdgeDriver();
 		
 		driver.manage().window().maximize();
