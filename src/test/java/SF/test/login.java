@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
@@ -31,10 +32,8 @@ public void initialize() {
 public void blank() {
 	
 	//System.setProperty("webdriver.chrome.driver", "C:/Users/sagar.tandu/Desktop/chromedriver_win32/chromedriver.exe");
-	WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver();
-	
-	driver=new ChromeDriver();
+	WebDriverManager.edgedriver().setup();
+	driver = new EdgeDriver();
 	driver.manage().window().maximize();
 	driver.get(url);
 	driver.findElement(By.name("identifier")).sendKeys(" ");
@@ -49,8 +48,8 @@ public void blank() {
 
 @Test (priority=1)
 public void invalidemail() {
-	WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver();
+	WebDriverManager.edgedriver().setup();
+	driver = new EdgeDriver();
 	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	driver.manage().window().maximize();
 	driver.get(url);
@@ -66,8 +65,8 @@ public void invalidemail() {
 
 @Test (priority=2)
 public void invalidphone() {
-	WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver();
+	WebDriverManager.edgedriver().setup();
+	driver = new EdgeDriver();
 	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	driver.manage().window().maximize();
 	driver.get(url);

@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,8 +33,8 @@ public class Compose {
 	public void composeemail() {
 		
 		 //System.setProperty("webdriver.chrome.driver", "C:/Users/sagar.tandu/Desktop/chromedriver_win32/chromedriver.exe");
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();
 		
 		driver.manage().window().maximize();
 	     driver.navigate().to(url);
