@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="24.199" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="26.046" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.14+8-LTS-263"/>
@@ -64,12 +64,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="login" classname="SF.test.Invalidemail" time="3.148"/>
-  <testcase name="text" classname="SF.test.Invalidemail" time="0.208"/>
-  <testcase name="login" classname="SF.test.Invalidphone" time="2.834"/>
+  <testcase name="login" classname="SF.test.Invalidemail" time="3.444"/>
+  <testcase name="text" classname="SF.test.Invalidemail" time="0.237"/>
+  <testcase name="login" classname="SF.test.Invalidphone" time="3.127"/>
   <testcase name="text" classname="SF.test.Invalidphone" time="0.161"/>
-  <testcase name="login" classname="SF.test.Blankcred" time="2.716"/>
-  <testcase name="text" classname="SF.test.Blankcred" time="0.081"/>
-  <testcase name="login" classname="SF.test.Validemail" time="4.059"/>
-  <testcase name="welcome" classname="SF.test.Validemail" time="1.272"/>
+  <testcase name="login" classname="SF.test.Blankcred" time="2.929"/>
+  <testcase name="text" classname="SF.test.Blankcred" time="0.034"/>
+  <testcase name="login" classname="SF.test.Validemail" time="5.427"/>
+  <testcase name="welcome" classname="SF.test.Validemail" time="1.204"/>
 </testsuite>
