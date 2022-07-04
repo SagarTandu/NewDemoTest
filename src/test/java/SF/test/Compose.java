@@ -20,19 +20,19 @@ public class Compose {
 	public String url= "https://mail.google.com/";
 	public Actions act;
 
-	@BeforeSuite
+	//@BeforeSuite
 	public void browser() {
-		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-	     driver=new ChromeDriver();
-	     driver.manage().window().maximize();
-	     driver.navigate().to(url);
+		
 	}
 	
 	
 	@Test
 	public void composeemail() {
 		
-       
+		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		 driver=new ChromeDriver();
+	     driver.manage().window().maximize();
+	     driver.navigate().to(url);
 		driver.findElement(By.name("identifier")).sendKeys("abcdsourcefuse@gmail.com");
 		driver.findElement(By.xpath("//span[text()='Next']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
