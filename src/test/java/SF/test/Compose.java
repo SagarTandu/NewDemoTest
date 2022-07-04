@@ -31,7 +31,7 @@ public class Compose {
 		String path = System.getProperty("user.dir");
 		System.out.println(path);
 		
-		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Desktop\\chromedriver_win32\\chromedriver.exe");
+		 System.setProperty("webdriver.chrome.driver", "C://Users//sagar.tandu//Desktop//chromedriver_win32//chromedriver.exe");
 		 driver=new ChromeDriver();
 	     driver.manage().window().maximize();
 	     driver.navigate().to(url);
