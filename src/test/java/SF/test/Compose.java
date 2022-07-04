@@ -14,6 +14,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Compose {
 	public WebDriver driver;
 	public WebDriverWait w; 
@@ -28,12 +30,12 @@ public class Compose {
 	
 	@Test
 	public void composeemail() {
-		String path = System.getProperty("user.dir");
-		System.out.println(path);
 		
-		 System.setProperty("webdriver.chrome.driver", "C:/Users/sagar.tandu/Desktop/chromedriver_win32/chromedriver.exe");
-		 driver=new ChromeDriver();
-	     driver.manage().window().maximize();
+		 //System.setProperty("webdriver.chrome.driver", "C:/Users/sagar.tandu/Desktop/chromedriver_win32/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
 	     driver.navigate().to(url);
 		driver.findElement(By.name("identifier")).sendKeys("abcdsourcefuse@gmail.com");
 		driver.findElement(By.xpath("//span[text()='Next']")).click();

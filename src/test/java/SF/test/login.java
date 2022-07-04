@@ -10,6 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class login {
 	
 public WebDriver driver;
@@ -28,7 +30,10 @@ public void initialize() {
 @Test (priority=0)
 public void blank() {
 	
-	 System.setProperty("webdriver.chrome.driver", "C:/Users/sagar.tandu/Desktop/chromedriver_win32/chromedriver.exe");
+	//System.setProperty("webdriver.chrome.driver", "C:/Users/sagar.tandu/Desktop/chromedriver_win32/chromedriver.exe");
+	WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver();
+	
 	driver=new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.get(url);
@@ -44,8 +49,9 @@ public void blank() {
 
 @Test (priority=1)
 public void invalidemail() {
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-	driver=new ChromeDriver();
+	WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver();
+	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	driver.manage().window().maximize();
 	driver.get(url);
 	//driver.navigate().to(url);
@@ -60,8 +66,9 @@ public void invalidemail() {
 
 @Test (priority=2)
 public void invalidphone() {
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-	driver=new ChromeDriver();
+	WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver();
+	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	driver.manage().window().maximize();
 	driver.get(url);
 	//driver.navigate().to(url);
