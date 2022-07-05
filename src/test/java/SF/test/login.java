@@ -23,9 +23,8 @@ public String url= "https://accounts.google.com/";
 public void initialize() {
 	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/chromedriver.exe");
-	WebDriverManager.chromedriver().setup();
-
-	driver=new ChromeDriver();
+	WebDriverManager.edgedriver().setup();
+	driver = new EdgeDriver();
 	driver.manage().window().maximize();
 	driver.get(url);
 
