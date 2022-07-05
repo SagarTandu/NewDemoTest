@@ -26,8 +26,8 @@ public void initialize() {
 	//System.setProperty("webdriver.chrome.driver", "C://Users//sagar.tandu//eclipse-workspace//test//drivers//chromedriver");
 	//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
 	ChromeOptions ch = new ChromeOptions();
-	ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");		
-	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");		
+	ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
 	System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
 	driver=new ChromeDriver(ch);
 	driver.manage().window().maximize();
