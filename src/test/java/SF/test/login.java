@@ -22,7 +22,8 @@ public String url= "https://accounts.google.com/";
 @BeforeSuite
 public void initialize() {
 	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-	System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/chromedriver.exe");
+	//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/chromedriver.exe");
+	WebDriverManager.chromedriver().setup();
 
 	driver=new ChromeDriver();
 	driver.manage().window().maximize();
