@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-05T11:35:15 IST" name="Default suite" finished-at="2022-07-05T11:35:26 IST" duration-ms="10667">
+  <suite started-at="2022-07-05T13:56:26 IST" name="Default suite" finished-at="2022-07-05T13:56:42 IST" duration-ms="15570">
     <groups>
     </groups>
-    <test started-at="2022-07-05T11:35:15 IST" name="Default test" finished-at="2022-07-05T11:35:26 IST" duration-ms="10667">
+    <test started-at="2022-07-05T13:56:26 IST" name="Default test" finished-at="2022-07-05T13:56:42 IST" duration-ms="15570">
       <class name="SF.test.Compose">
-        <test-method is-config="true" signature="browser()[pri:0, instance:SF.test.Compose@53ce1329]" started-at="2022-07-05T11:35:10 IST" name="browser" finished-at="2022-07-05T11:35:15 IST" duration-ms="5369" status="PASS">
+        <test-method is-config="true" signature="browser()[pri:0, instance:SF.test.Compose@53ce1329]" started-at="2022-07-05T13:56:21 IST" name="browser" finished-at="2022-07-05T13:56:26 IST" duration-ms="5272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser -->
-        <test-method signature="composeemail()[pri:0, instance:SF.test.Compose@53ce1329]" started-at="2022-07-05T11:35:15 IST" name="composeemail" finished-at="2022-07-05T11:35:26 IST" duration-ms="10636" status="PASS">
+        <test-method signature="composeemail()[pri:0, instance:SF.test.Compose@53ce1329]" started-at="2022-07-05T13:56:26 IST" name="composeemail" finished-at="2022-07-05T13:56:42 IST" duration-ms="15523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- composeemail -->
-        <test-method is-config="true" signature="close()[pri:0, instance:SF.test.Compose@53ce1329]" started-at="2022-07-05T11:35:26 IST" name="close" finished-at="2022-07-05T11:35:27 IST" duration-ms="707" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:SF.test.Compose@53ce1329]" started-at="2022-07-05T13:56:42 IST" name="close" finished-at="2022-07-05T13:56:43 IST" duration-ms="804" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

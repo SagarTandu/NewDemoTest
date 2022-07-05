@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,10 +26,11 @@ public class Compose {
 
 	@BeforeSuite
 	public void browser() {
+		//ChromeOptions ch = new ChromeOptions();
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/chromedriver.exe");
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:/Users/sagar.tandu/Downloads/chromedriver_win32/chromedriver.exe");
+		driver=new ChromeDriver();
+		//WebDriverManager.chromedriver().setup();
 		driver.manage().window().maximize();
 	    driver.navigate().to(url);
 	}
