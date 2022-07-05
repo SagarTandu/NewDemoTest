@@ -1,6 +1,7 @@
 package SF.test;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +29,7 @@ public class Compose {
 	public void browser() {
 		//ChromeOptions ch = new ChromeOptions();
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
 		driver=new ChromeDriver();
 		//WebDriverManager.chromedriver().setup();
 		driver.manage().window().maximize();
@@ -40,7 +41,8 @@ public class Compose {
 	public void composeemail() {
 		driver.findElement(By.name("identifier")).sendKeys("abcdsourcefuse@gmail.com");
 		driver.findElement(By.xpath("//span[text()='Next']")).click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
 		w = new WebDriverWait(driver, Duration.ofSeconds(10));
 		w.until(ExpectedConditions.visibilityOf(WelcomeMsg));
@@ -53,7 +55,7 @@ public class Compose {
 		comp.click();
 		driver.findElement(By.className("vO")).click();
 		driver.findElement(By.className("vO")).sendKeys("abcdsourcefuse@gmail.com");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.className("aoT")).sendKeys("SourceFuse");
 		driver.findElement(By.className("Am")).sendKeys("This is a test email");
 		driver.findElement(By.xpath("//div[text()='Send']")).click();
