@@ -27,8 +27,8 @@ public class Compose {
 	public void browser() {
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/chromedriver.exe");
-		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	    driver.navigate().to(url);
 	}
