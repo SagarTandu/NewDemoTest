@@ -47,12 +47,12 @@ public class Compose {
 		act.sendKeys(Keys.ENTER).build().perform();
 		//driver.findElement(By.xpath("//span[text()='Next']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
+		/*WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
 		w = new WebDriverWait(driver, Duration.ofSeconds(10));
 		w.until(ExpectedConditions.visibilityOf(WelcomeMsg));
 		String message = WelcomeMsg.getText();
 		System.out.println(message);
-		Assert.assertEquals("Welcome", message);
+		Assert.assertEquals("Welcome", message); */
 		driver.findElement(By.name("password")).sendKeys("Sagar@123");
 		driver.findElement(By.id("passwordNext")).click();
 		WebElement comp = driver.findElement(By.xpath("//div[text()='Compose']"));
