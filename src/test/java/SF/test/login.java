@@ -20,14 +20,14 @@ public WebDriver driver;
 public WebDriverWait w; 
 public String url= "https://accounts.google.com/";
 
-@BeforeSuite
+//@BeforeSuite
 public void initialize() {
 	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	//System.setProperty("webdriver.chrome.driver", "C://Users//sagar.tandu//eclipse-workspace//test//drivers//chromedriver");
 	//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
 	ChromeOptions ch = new ChromeOptions();
 	//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");		
-	//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
+	ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
 	System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
 	driver=new ChromeDriver(ch);
 	driver.manage().window().maximize();
@@ -35,7 +35,7 @@ public void initialize() {
 
 }
 
-@Test (priority=0)
+//@Test (priority=0)
 public void blank() {
 	driver.findElement(By.name("identifier")).sendKeys(" ");
 	driver.findElement(By.xpath("//span[text()='Next']")).click();
@@ -47,7 +47,7 @@ public void blank() {
 
 
 
-@Test (priority=1)
+//@Test (priority=1)
 public void invalidemail() {
 	driver.navigate().to(url);
 	driver.findElement(By.name("identifier")).sendKeys("xxxxxxx@gmail.cons");
@@ -59,7 +59,7 @@ public void invalidemail() {
 }
 	
 
-@Test (priority=2)
+//@Test (priority=2)
 public void invalidphone() {
 	driver.navigate().to(url);
 	driver.findElement(By.name("identifier")).sendKeys("1234567890112");
