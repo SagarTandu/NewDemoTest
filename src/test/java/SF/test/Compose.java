@@ -1,15 +1,12 @@
 package SF.test;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,8 +14,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Compose {
 	public WebDriver driver;
@@ -42,6 +37,8 @@ public class Compose {
 	
 	@Test
 	public void composeemail() {
+		/*
+		
 		Actions act = new Actions(driver);
 		driver.findElement(By.name("identifier")).sendKeys("abcdsourcefuse@gmail.com");
 		act.sendKeys(Keys.ENTER).build().perform();
@@ -52,7 +49,7 @@ public class Compose {
 		w.until(ExpectedConditions.visibilityOf(WelcomeMsg));
 		String message = WelcomeMsg.getText();
 		System.out.println(message);
-		Assert.assertEquals("Welcome", message); */
+		Assert.assertEquals("Welcome", message); 
 		driver.findElement(By.name("password")).sendKeys("Sagar@123");
 		driver.findElement(By.id("passwordNext")).click();
 		WebElement comp = driver.findElement(By.xpath("//div[text()='Compose']"));
@@ -65,6 +62,12 @@ public class Compose {
 		driver.findElement(By.xpath("//div[text()='Send']")).click();
 		String sentmessage = driver.findElement(By.xpath("//span[text()='Message sent']")).getText();
 		System.out.println(sentmessage);
+		
+		*/
+		
+		System.out.println("Compose Email");
+		
+		
 	}
 	
    @AfterSuite
