@@ -28,7 +28,7 @@ public class Compose {
 	public void browser() {
 		//ChromeOptions ch = new ChromeOptions();
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\eclipse-workspace\\test\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C://Users//sagar.tandu//eclipse-workspace//test//drivers//chromedriver.exe");
 		driver=new ChromeDriver();
 		//WebDriverManager.chromedriver().setup();
 		driver.manage().window().maximize();
