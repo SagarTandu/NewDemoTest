@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -41,8 +42,10 @@ public class Compose {
 	
 	@Test
 	public void composeemail() {
+		Actions act = new Actions(driver);
 		driver.findElement(By.name("identifier")).sendKeys("abcdsourcefuse@gmail.com");
-		driver.findElement(By.xpath("//span[text()='Next']")).click();
+		act.sendKeys(Keys.ENTER).build().perform();
+		//driver.findElement(By.xpath("//span[text()='Next']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
 		w = new WebDriverWait(driver, Duration.ofSeconds(10));
