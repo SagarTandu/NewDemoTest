@@ -6,7 +6,7 @@
       <class name="SF.test.Compose">
         <methods>
           <include name="composeemail"/>
-          <include name="close"/>
+          <include name="browser"/>
         </methods>
       </class> <!-- SF.test.Compose -->
     </classes>

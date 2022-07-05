@@ -19,7 +19,7 @@ public WebDriver driver;
 public WebDriverWait w; 
 public String url= "https://accounts.google.com/";
 
-//@BeforeSuite
+@BeforeSuite
 public void initialize() {
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	driver=new ChromeDriver();
@@ -30,10 +30,6 @@ public void initialize() {
 
 @Test (priority=0)
 public void blank() {
-	System.setProperty("webdriver.edge.driver", "C:\\Users\\sagar.tandu\\Downloads\\edgedriver_win64\\msedgedriver.exe");
-	driver = new EdgeDriver();
-	driver.manage().window().maximize();
-	driver.get(url);
 	driver.findElement(By.name("identifier")).sendKeys(" ");
 	driver.findElement(By.xpath("//span[text()='Next']")).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -46,11 +42,7 @@ public void blank() {
 
 @Test (priority=1)
 public void invalidemail() {
-	System.setProperty("webdriver.edge.driver", "C:\\Users\\sagar.tandu\\Downloads\\edgedriver_win64\\msedgedriver.exe");
-	driver = new EdgeDriver();
-	driver.manage().window().maximize();
-	driver.get(url);
-	//driver.navigate().to(url);
+	driver.navigate().to(url);
 	driver.findElement(By.name("identifier")).sendKeys("xxxxxxx@gmail.cons");
 	driver.findElement(By.xpath("//span[text()='Next']")).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -62,11 +54,7 @@ public void invalidemail() {
 
 @Test (priority=2)
 public void invalidphone() {
-	System.setProperty("webdriver.edge.driver", "C:\\Users\\sagar.tandu\\Downloads\\edgedriver_win64\\msedgedriver.exe");
-	driver = new EdgeDriver();
-	driver.manage().window().maximize();
-	driver.get(url);
-	//driver.navigate().to(url);
+	driver.navigate().to(url);
 	driver.findElement(By.name("identifier")).sendKeys("1234567890112");
 	driver.findElement(By.xpath("//span[text()='Next']")).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
