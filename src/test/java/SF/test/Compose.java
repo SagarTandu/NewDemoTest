@@ -26,9 +26,9 @@ public class Compose {
 	public void browser() {
 		ChromeOptions ch = new ChromeOptions();
 		//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");		
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
-		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
+		//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
 		driver=new ChromeDriver(ch);
 		//WebDriverManager.chromedriver().setup();
 		driver.manage().window().maximize();
@@ -45,12 +45,12 @@ public class Compose {
 		//driver.findElement(By.xpath("//span[text()='Next']")).click();
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-		/*WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
+		WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
 		w = new WebDriverWait(driver, Duration.ofSeconds(10));
 		w.until(ExpectedConditions.visibilityOf(WelcomeMsg));
 		String message = WelcomeMsg.getText();
 		System.out.println(message);
-		Assert.assertEquals("Welcome", message); */
+		Assert.assertEquals("Welcome", message); 
 		
 		//driver.findElement(By.name("password")).sendKeys("Sagar@123");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Sagar@123");
@@ -67,10 +67,7 @@ public class Compose {
 		driver.findElement(By.xpath("//div[text()='Send']")).click();
 		String sentmessage = driver.findElement(By.xpath("//span[text()='Message sent']")).getText();
 		System.out.println(sentmessage);
-	
-		
-		//System.out.println("Compose Email");
-		
+			
 		
 	}
 	

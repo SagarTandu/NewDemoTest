@@ -5,8 +5,10 @@
     <classes>
       <class name="SF.test.login">
         <methods>
+          <include name="blank"/>
           <include name="initialize"/>
           <include name="invalidphone"/>
+          <include name="invalidemail"/>
         </methods>
       </class> <!-- SF.test.login -->
     </classes>
