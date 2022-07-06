@@ -3,10 +3,12 @@ package SF.test;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -20,6 +22,7 @@ public class login {
 public WebDriver driver;
 public WebDriverWait w; 
 public String url= "https://accounts.google.com/";
+public Actions act;
 
 @BeforeClass
 public void initialize() {
@@ -41,6 +44,8 @@ public void blank() {
 	
 	
 	driver.findElement(By.name("identifier")).sendKeys(" ");
+	act.sendKeys(Keys.ENTER).build().perform();
+
 	driver.findElement(By.xpath("//span[text()='Next']")).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	String text = driver.findElement(By.xpath("//div[@class='o6cuMc']")).getText();
