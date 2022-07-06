@@ -42,10 +42,9 @@ public void initialize() {
 @Test (priority=0)
 public void blank() {
 	
-	
+	Actions act = new Actions(driver);
 	driver.findElement(By.name("identifier")).sendKeys(" ");
 	act.sendKeys(Keys.ENTER).build().perform();
-
 	driver.findElement(By.xpath("//span[text()='Next']")).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	String text = driver.findElement(By.xpath("//div[@class='o6cuMc']")).getText();
