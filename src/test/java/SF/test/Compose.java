@@ -22,7 +22,7 @@ public class Compose {
 	public String url= "https://mail.google.com/";
 	public Actions act;
 
-	@BeforeClass
+	//@BeforeClass
 	public void browser() {
 		ChromeOptions ch = new ChromeOptions();
 		//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");		
@@ -36,7 +36,7 @@ public class Compose {
 	}
 	
 	
-	@Test
+	//@Test
 	public void composeemail() throws InterruptedException {
 		
 		Actions act = new Actions(driver);

@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -20,7 +21,7 @@ public WebDriver driver;
 public WebDriverWait w; 
 public String url= "https://accounts.google.com/";
 
-//@BeforeSuite
+@BeforeClass
 public void initialize() {
 	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	//System.setProperty("webdriver.chrome.driver", "C://Users//sagar.tandu//eclipse-workspace//test//drivers//chromedriver");
@@ -35,18 +36,17 @@ public void initialize() {
 
 }
 
-//@Test (priority=0)
+@Test (priority=0)
 public void blank() {
 	
-	/*
+	
 	driver.findElement(By.name("identifier")).sendKeys(" ");
 	driver.findElement(By.xpath("//span[text()='Next']")).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	String text = driver.findElement(By.xpath("//div[@class='o6cuMc']")).getText();
 	System.out.println(text);
 	Assert.assertEquals("Enter an email or phone number", text);
-	*/
-	System.out.println("Blank");
+	
 }
 
 
