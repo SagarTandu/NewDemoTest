@@ -20,7 +20,7 @@ public WebDriver driver;
 public WebDriverWait w; 
 public String url= "https://accounts.google.com/";
 
-@BeforeSuite
+//@BeforeSuite
 public void initialize() {
 	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	//System.setProperty("webdriver.chrome.driver", "C://Users//sagar.tandu//eclipse-workspace//test//drivers//chromedriver");
@@ -35,7 +35,7 @@ public void initialize() {
 
 }
 
-@Test (priority=0)
+//@Test (priority=0)
 public void blank() {
 	
 	/*
@@ -67,7 +67,7 @@ public void invalidemail() {
 }
 	
 
-@Test (priority=2)
+//@Test (priority=2)
 public void invalidphone() {
 	/*
 	driver.navigate().to(url);
@@ -78,7 +78,7 @@ public void invalidphone() {
 	System.out.println(text);
 	Assert.assertEquals("Enter a valid email or phone number", text);
 	*/
-	System.out.println("invalidphone");
+	System.out.println("invalidphone`");
 	
     }
 	

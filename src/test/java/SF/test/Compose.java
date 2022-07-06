@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -21,7 +22,7 @@ public class Compose {
 	public String url= "https://mail.google.com/";
 	public Actions act;
 
-	@BeforeSuite
+	@BeforeClass
 	public void browser() {
 		ChromeOptions ch = new ChromeOptions();
 		//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");		
@@ -37,19 +38,20 @@ public class Compose {
 	
 	@Test
 	public void composeemail() {
-		/*
 		
 		Actions act = new Actions(driver);
 		driver.findElement(By.name("identifier")).sendKeys("abcdsourcefuse@gmail.com");
 		act.sendKeys(Keys.ENTER).build().perform();
 		//driver.findElement(By.xpath("//span[text()='Next']")).click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		/*WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
 		w = new WebDriverWait(driver, Duration.ofSeconds(10));
 		w.until(ExpectedConditions.visibilityOf(WelcomeMsg));
 		String message = WelcomeMsg.getText();
 		System.out.println(message);
-		Assert.assertEquals("Welcome", message); 
+		Assert.assertEquals("Welcome", message); */
+		
 		driver.findElement(By.name("password")).sendKeys("Sagar@123");
 		driver.findElement(By.id("passwordNext")).click();
 		WebElement comp = driver.findElement(By.xpath("//div[text()='Compose']"));
@@ -62,15 +64,14 @@ public class Compose {
 		driver.findElement(By.xpath("//div[text()='Send']")).click();
 		String sentmessage = driver.findElement(By.xpath("//span[text()='Message sent']")).getText();
 		System.out.println(sentmessage);
+	
 		
-		*/
-		
-		System.out.println("Compose Email");
+		//System.out.println("Compose Email");
 		
 		
 	}
 	
-   @AfterSuite
+  // @AfterSuite
 	public void close() {
 		driver.quit();
 	}
