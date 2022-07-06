@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\sagar.tandu\AppData\Local\Temp\testng-eclipse--1522499865\testng-customsuite.xml</span>
+                    <span>C:\Users\sagar.tandu\AppData\Local\Temp\testng-eclipse-841498069\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +105,16 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="SF.test.login" class="method navigator-link" hash-for-method="blank">blank</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="SF.test.login" class="method navigator-link" hash-for-method="invalidemail">invalidemail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="SF.test.login" class="method navigator-link" hash-for-method="invalidphone">invalidphone</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -132,12 +142,26 @@
                   <span class="method-name">blank</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidemail">
+                  </a> <!-- invalidemail -->
+                  <span class="method-name">invalidemail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidphone">
+                  </a> <!-- invalidphone -->
+                  <span class="method-name">invalidphone</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sagar.tandu\AppData\Local\Temp\testng-eclipse--1522499865\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\sagar.tandu\AppData\Local\Temp\testng-eclipse-841498069\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -186,16 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'blank')
+data.setCell(0, 1, 'invalidphone')
 data.setCell(0, 2, 'SF.test.login')
-data.setCell(0, 3, 443);
+data.setCell(0, 3, 972);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'invalidemail')
+data.setCell(1, 2, 'SF.test.login')
+data.setCell(1, 3, 965);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'blank')
+data.setCell(2, 2, 'SF.test.login')
+data.setCell(2, 3, 468);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 443 ms</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -228,7 +260,15 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">blank</span>
-                <span class="method-start">2969 ms</span>
+                <span class="method-start">3131 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">invalidemail</span>
+                <span class="method-start">3604 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">invalidphone</span>
+                <span class="method-start">4570 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

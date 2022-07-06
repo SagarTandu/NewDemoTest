@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-06T11:14:24 IST" name="Default suite" finished-at="2022-07-06T11:14:27 IST" duration-ms="3428">
+  <suite started-at="2022-07-06T12:13:32 IST" name="Default suite" finished-at="2022-07-06T12:13:37 IST" duration-ms="5563">
     <groups>
     </groups>
-    <test started-at="2022-07-06T11:14:24 IST" name="Default test" finished-at="2022-07-06T11:14:27 IST" duration-ms="3428">
+    <test started-at="2022-07-06T12:13:32 IST" name="Default test" finished-at="2022-07-06T12:13:37 IST" duration-ms="5563">
       <class name="SF.test.login">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:SF.test.login@6e0f5f7f]" started-at="2022-07-06T11:14:24 IST" name="initialize" finished-at="2022-07-06T11:14:27 IST" duration-ms="2963" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:SF.test.login@6e0f5f7f]" started-at="2022-07-06T12:13:32 IST" name="initialize" finished-at="2022-07-06T12:13:35 IST" duration-ms="3125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="blank()[pri:0, instance:SF.test.login@6e0f5f7f]" started-at="2022-07-06T11:14:27 IST" name="blank" finished-at="2022-07-06T11:14:27 IST" duration-ms="443" status="PASS">
+        <test-method signature="blank()[pri:0, instance:SF.test.login@6e0f5f7f]" started-at="2022-07-06T12:13:35 IST" name="blank" finished-at="2022-07-06T12:13:35 IST" duration-ms="468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- blank -->
+        <test-method signature="invalidemail()[pri:1, instance:SF.test.login@6e0f5f7f]" started-at="2022-07-06T12:13:35 IST" name="invalidemail" finished-at="2022-07-06T12:13:36 IST" duration-ms="965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidemail -->
+        <test-method signature="invalidphone()[pri:2, instance:SF.test.login@6e0f5f7f]" started-at="2022-07-06T12:13:36 IST" name="invalidphone" finished-at="2022-07-06T12:13:37 IST" duration-ms="972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidphone -->
       </class> <!-- SF.test.login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
