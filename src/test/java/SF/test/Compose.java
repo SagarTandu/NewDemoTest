@@ -22,13 +22,13 @@ public class Compose {
 	public String url= "https://mail.google.com/";
 	public Actions act;
 
-	//@BeforeClass
+	@BeforeClass
 	public void browser() {
 		ChromeOptions ch = new ChromeOptions();
 		//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
-		//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
+		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
 		driver=new ChromeDriver(ch);
 		//WebDriverManager.chromedriver().setup();
 		driver.manage().window().maximize();
@@ -36,14 +36,12 @@ public class Compose {
 	}
 	
 	
-	//@Test
+	@Test
 	public void composeemail() throws InterruptedException {
 		
 		Actions act = new Actions(driver);
-		driver.findElement(By.name("identifier")).sendKeys("abcdsourcefuse@gmail.com");
-		act.sendKeys(Keys.ENTER).build().perform();
-		//driver.findElement(By.xpath("//span[text()='Next']")).click();
-		
+		driver.findElement(By.name("identifier")).sendKeys("abcdeSfuse@gmail.com");
+		act.sendKeys(Keys.ENTER).build().perform();		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
 		w = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -51,17 +49,12 @@ public class Compose {
 		String message = WelcomeMsg.getText();
 		System.out.println(message);
 		Assert.assertEquals("Welcome", message); 
-		
-		//driver.findElement(By.name("password")).sendKeys("Sagar@123");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Sagar@123");
 		driver.findElement(By.id("passwordNext")).click();
-		//driver.findElement(By.xpath("//div[@class='T-I T-I-KE L3']")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[text()='Compose']")).click();
-		//comp.click();
 		driver.findElement(By.className("vO")).click();
 		driver.findElement(By.className("vO")).sendKeys("abcdsourcefuse@gmail.com");
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.className("aoT")).sendKeys("SourceFuse");
 		driver.findElement(By.className("Am")).sendKeys("This is a test email");
 		driver.findElement(By.xpath("//div[text()='Send']")).click();
@@ -71,7 +64,7 @@ public class Compose {
 		
 	}
 	
-  // @AfterSuite
+ @AfterSuite
 	public void close() {
 		driver.quit();
 	}

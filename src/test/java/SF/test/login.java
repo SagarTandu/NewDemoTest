@@ -27,7 +27,7 @@ public Actions act;
 
 
 
-@BeforeClass
+@Test (priority=0)
 public void initialize() {
 
 	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
@@ -44,7 +44,7 @@ public void initialize() {
 
 }
 
-@Test (priority=0)
+@Test (priority=1)
 public void blank() {
 	
 	driver.findElement(By.name("identifier")).sendKeys(" ");
@@ -58,7 +58,7 @@ public void blank() {
 }
 
 
-@Test (priority=1)
+@Test (priority=2)
 public void invalidemail() throws InterruptedException {
 	
 	driver.navigate().to(url);
@@ -73,7 +73,7 @@ public void invalidemail() throws InterruptedException {
 }
 	
 
-@Test (priority=2)
+@Test (priority=3)
 public void invalidphone() {
 	
 	driver.navigate().to(url);
