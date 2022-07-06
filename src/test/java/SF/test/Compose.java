@@ -55,9 +55,9 @@ public class Compose {
 		//driver.findElement(By.name("password")).sendKeys("Sagar@123");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Sagar@123");
 		driver.findElement(By.id("passwordNext")).click();
-		driver.findElement(By.xpath("//div[@class='T-I T-I-KE L3']")).click();
+		//driver.findElement(By.xpath("//div[@class='T-I T-I-KE L3']")).click();
 		
-		//WebElement comp = driver.findElement(By.xpath("//div[text()='Compose']"));
+		driver.findElement(By.xpath("//div[contains(text(),'Compose')]"));
 		//comp.click();
 		driver.findElement(By.className("vO")).click();
 		driver.findElement(By.className("vO")).sendKeys("abcdsourcefuse@gmail.com");
