@@ -52,7 +52,8 @@ public class Compose {
 		System.out.println(message);
 		Assert.assertEquals("Welcome", message); */
 		
-		driver.findElement(By.name("password")).sendKeys("Sagar@123");
+		//driver.findElement(By.name("password")).sendKeys("Sagar@123");
+		driver.findElement(By.xpath("//input[@type=''password]")).sendKeys("Sagar@123");
 		driver.findElement(By.id("passwordNext")).click();
 		WebElement comp = driver.findElement(By.xpath("//div[text()='Compose']"));
 		comp.click();
