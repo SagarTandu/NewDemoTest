@@ -57,7 +57,7 @@ public class Compose {
 		driver.findElement(By.id("passwordNext")).click();
 		//driver.findElement(By.xpath("//div[@class='T-I T-I-KE L3']")).click();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//div[contains(text(),'Compose')]"));
+		driver.findElement(By.xpath("//div[text()='Compose']")).click();
 		//comp.click();
 		driver.findElement(By.className("vO")).click();
 		driver.findElement(By.className("vO")).sendKeys("abcdsourcefuse@gmail.com");
