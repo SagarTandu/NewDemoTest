@@ -22,7 +22,7 @@ public class Compose {
 	public String url= "https://mail.google.com/";
 	public Actions act;
 
-	@Test
+	@Test 
 	public void browser() {
 		ChromeOptions ch = new ChromeOptions();
 		//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");		
@@ -60,9 +60,13 @@ public class Compose {
 		driver.findElement(By.xpath("//div[text()='Send']")).click();
 		String sentmessage = driver.findElement(By.xpath("//span[text()='Message sent']")).getText();
 		System.out.println(sentmessage);
-			
-		
 	}
+	
+ @Test
+ public void printText() {
+	 System.out.println("printing a demo sample text");
+ }
+	
 	
  @Test
 	public void close() {

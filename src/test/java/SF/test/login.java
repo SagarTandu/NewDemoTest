@@ -30,13 +30,11 @@ public Actions act;
 @Test (priority=0)
 public void initialize() {
 
-	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-	//System.setProperty("webdriver.chrome.driver", "C://Users//sagar.tandu//eclipse-workspace//test//drivers//chromedriver");
 	System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
+	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	ChromeOptions ch = new ChromeOptions();
 	//ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");		
 	ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
-	//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
 	driver=new ChromeDriver(ch);
 	act = new Actions(driver);
 	driver.manage().window().maximize();
@@ -49,9 +47,8 @@ public void blank() {
 	
 	driver.findElement(By.name("identifier")).sendKeys(" ");
 	act.sendKeys(Keys.ENTER).build().perform();
-	//driver.findElement(By.xpath("//span[text()='Next']")).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-	String text = driver.findElement(By.xpath("//*[text()='Enter an email or phone number']")).getText();
+	String text = driver.findElement(By.xpath("//*[tex()='Enter an email or phone number']")).getText();
 	System.out.println(text);
 	Assert.assertEquals("Enter an email or phone number", text);
 	
@@ -64,7 +61,6 @@ public void invalidemail() throws InterruptedException {
 	driver.navigate().to(url);
 	driver.findElement(By.name("identifier")).sendKeys("sagar.tndu@gmail");
 	act.sendKeys(Keys.ENTER).build().perform();
-	//driver.findElement(By.xpath("//span[text()='Next']")).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	String text = driver.findElement(By.xpath("//*[text()='Enter a valid email or phone number']")).getText();
 	System.out.println(text);
@@ -81,10 +77,8 @@ public void invalidphone() {
 	act.sendKeys(Keys.ENTER).build().perform();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	String text = driver.findElement(By.xpath("//*[text()='Enter a valid email or phone number']")).getText();
-	//String text = driver.findElement(By.xpath("//div[@class='o6cuMc']")).getText();
 	System.out.println(text);
 	Assert.assertEquals("Enter a valid email or phone number", text);
-	System.out.println("invalidphone`");
 	
     }
 	
