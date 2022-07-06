@@ -1,99 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-05T17:55:57 IST" name="Default suite" finished-at="2022-07-05T17:55:57 IST" duration-ms="23">
+  <suite started-at="2022-07-06T11:14:24 IST" name="Default suite" finished-at="2022-07-06T11:14:27 IST" duration-ms="3428">
     <groups>
     </groups>
-    <test started-at="2022-07-05T17:55:57 IST" name="Default test" finished-at="2022-07-05T17:55:57 IST" duration-ms="23">
-      <class name="SF.test.Compose">
-        <test-method is-config="true" signature="browser()[pri:0, instance:SF.test.Compose@53ce1329]" started-at="2022-07-05T17:55:57 IST" name="browser" finished-at="2022-07-05T17:55:57 IST" duration-ms="57" status="FAIL">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable must exist: C:\var\lib\jenkins\workspace\Automate\drivers\chromedriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable must exist: C:\var\lib\jenkins\workspace\Automate\drivers\chromedriver
-at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:315)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:147)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:38)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:231)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
-at org.openqa.selenium.chrome.ChromeDriverService.createServiceWithConfig(ChromeDriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:80)
-at SF.test.Compose.browser(Compose.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+    <test started-at="2022-07-06T11:14:24 IST" name="Default test" finished-at="2022-07-06T11:14:27 IST" duration-ms="3428">
+      <class name="SF.test.login">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:SF.test.login@6e0f5f7f]" started-at="2022-07-06T11:14:24 IST" name="initialize" finished-at="2022-07-06T11:14:27 IST" duration-ms="2963" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browser -->
-        <test-method signature="composeemail()[pri:0, instance:SF.test.Compose@53ce1329]" started-at="2022-07-05T17:55:57 IST" name="composeemail" finished-at="2022-07-05T17:55:57 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable must exist: C:\var\lib\jenkins\workspace\Automate\drivers\chromedriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable must exist: C:\var\lib\jenkins\workspace\Automate\drivers\chromedriver
-at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:315)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:147)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:38)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:231)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
-at org.openqa.selenium.chrome.ChromeDriverService.createServiceWithConfig(ChromeDriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:80)
-at SF.test.Compose.browser(Compose.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+        </test-method> <!-- initialize -->
+        <test-method signature="blank()[pri:0, instance:SF.test.login@6e0f5f7f]" started-at="2022-07-06T11:14:27 IST" name="blank" finished-at="2022-07-06T11:14:27 IST" duration-ms="443" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- composeemail -->
-        <test-method is-config="true" signature="close()[pri:0, instance:SF.test.Compose@53ce1329]" started-at="2022-07-05T17:55:57 IST" name="close" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1657023957806" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- SF.test.Compose -->
+        </test-method> <!-- blank -->
+      </class> <!-- SF.test.login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
