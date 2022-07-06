@@ -37,7 +37,7 @@ public class Compose {
 	
 	
 	@Test
-	public void composeemail() {
+	public void composeemail() throws InterruptedException {
 		
 		Actions act = new Actions(driver);
 		driver.findElement(By.name("identifier")).sendKeys("abcdsourcefuse@gmail.com");
@@ -56,7 +56,7 @@ public class Compose {
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Sagar@123");
 		driver.findElement(By.id("passwordNext")).click();
 		//driver.findElement(By.xpath("//div[@class='T-I T-I-KE L3']")).click();
-		
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[contains(text(),'Compose')]"));
 		//comp.click();
 		driver.findElement(By.className("vO")).click();
