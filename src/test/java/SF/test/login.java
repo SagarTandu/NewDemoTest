@@ -47,7 +47,7 @@ public void blank() {
 	driver.findElement(By.name("identifier")).sendKeys(" ");
 	act.sendKeys(Keys.ENTER).build().perform();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-	String text = driver.findElement(By.xpath("//*[text()='Enter an email or phone number']")).getText();
+	String text = driver.findElement(By.xpath("//*[tex()='Enter an email or phone number']")).getText();
 	System.out.println(text);
 	Assert.assertEquals("Enter an email or phone number", text);
 	
