@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SF.test.Compose">
+      <class name="SF.test.login">
         <methods>
-          <include name="composeemail"/>
-          <include name="browser"/>
+          <include name="blank"/>
+          <include name="initialize"/>
+          <include name="invalidphone"/>
+          <include name="invalidemail"/>
         </methods>
-      </class> <!-- SF.test.Compose -->
+      </class> <!-- SF.test.login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
