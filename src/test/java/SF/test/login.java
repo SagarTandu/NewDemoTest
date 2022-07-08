@@ -80,9 +80,5 @@ public void invalidphone() {
 	Assert.assertEquals("Enter a valid email or phone number", text);
 	
     }
-@Test
-public void checkName() {
-	System.out.println("checking the name format");
-}
 	
 }

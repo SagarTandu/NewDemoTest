@@ -46,9 +46,6 @@ public class Compose {
 		Assert.assertEquals("Welcome", message);
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Sagar@123");
 		act.sendKeys(Keys.ENTER).build().perform();		
-
-		//driver.findElement(By.id("passwordNext")).click();
-		//Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[text()='Compose']")).click();
 		driver.findElement(By.className("vO")).click();
 		driver.findElement(By.className("vO")).sendKeys("abcdsourcefuse@gmail.com");
@@ -65,7 +62,7 @@ public class Compose {
  }
 	
 	
- //@Test
+ @Test
 	public void close() {
 		driver.quit();
 	}
