@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-07T09:46:20 IST" name="Default suite" finished-at="2022-07-07T09:46:38 IST" duration-ms="18334">
+  <suite started-at="2022-07-08T10:31:45 IST" name="Default suite" finished-at="2022-07-08T10:32:02 IST" duration-ms="16749">
     <groups>
     </groups>
-    <test started-at="2022-07-07T09:46:20 IST" name="Default test" finished-at="2022-07-07T09:46:38 IST" duration-ms="18334">
+    <test started-at="2022-07-08T10:31:45 IST" name="Default test" finished-at="2022-07-08T10:32:02 IST" duration-ms="16749">
       <class name="SF.test.Compose">
-        <test-method signature="browser()[pri:0, instance:SF.test.Compose@4efc180e]" started-at="2022-07-07T09:46:20 IST" name="browser" finished-at="2022-07-07T09:46:26 IST" duration-ms="6124" status="PASS">
+        <test-method signature="browser()[pri:0, instance:SF.test.Compose@4efc180e]" started-at="2022-07-08T10:31:45 IST" name="browser" finished-at="2022-07-08T10:31:49 IST" duration-ms="4666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser -->
-        <test-method signature="composeemail()[pri:0, instance:SF.test.Compose@4efc180e]" started-at="2022-07-07T09:46:26 IST" name="composeemail" finished-at="2022-07-07T09:46:38 IST" duration-ms="12159" status="PASS">
+        <test-method signature="composeemail()[pri:0, instance:SF.test.Compose@4efc180e]" started-at="2022-07-08T10:31:49 IST" name="composeemail" finished-at="2022-07-08T10:32:01 IST" duration-ms="12051" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- composeemail -->
-        <test-method signature="printText()[pri:0, instance:SF.test.Compose@4efc180e]" started-at="2022-07-07T09:46:38 IST" name="printText" finished-at="2022-07-07T09:46:38 IST" duration-ms="3" status="PASS">
+        <test-method signature="printText()[pri:0, instance:SF.test.Compose@4efc180e]" started-at="2022-07-08T10:32:01 IST" name="printText" finished-at="2022-07-08T10:32:01 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printText -->
