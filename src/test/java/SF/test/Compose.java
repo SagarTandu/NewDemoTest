@@ -49,6 +49,7 @@ public class Compose {
 
 		//driver.findElement(By.id("passwordNext")).click();
 		//Thread.sleep(5000);
+		w = new WebDriverWait(driver, Duration.ofSeconds(30));
 		driver.findElement(By.xpath("//div[text()='Compose']")).click();
 		driver.findElement(By.className("vO")).click();
 		driver.findElement(By.className("vO")).sendKeys("abcdsourcefuse@gmail.com");
