@@ -32,7 +32,7 @@ public class Compose {
 	
 	
 	@Test
-	public void composeemail() {
+	public void composeemail() throws InterruptedException {
 		
 		Actions act = new Actions(driver);
 		driver.findElement(By.name("identifier")).sendKeys("abcdeSfuse@gmail.com");
@@ -48,8 +48,7 @@ public class Compose {
 		act.sendKeys(Keys.ENTER).build().perform();		
 
 		//driver.findElement(By.id("passwordNext")).click();
-		//Thread.sleep(5000);
-		w = new WebDriverWait(driver, Duration.ofSeconds(30));
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[text()='Compose']")).click();
 		driver.findElement(By.className("vO")).click();
 		driver.findElement(By.className("vO")).sendKeys("abcdsourcefuse@gmail.com");
