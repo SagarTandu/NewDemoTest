@@ -38,9 +38,9 @@ public class Compose {
 		driver.findElement(By.name("identifier")).sendKeys("abcdeSfuse@gmail.com");
 		act.sendKeys(Keys.ENTER).build().perform();		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-		WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
-		w = new WebDriverWait(driver, Duration.ofSeconds(10));
-		w.until(ExpectedConditions.visibilityOf(WelcomeMsg));
+		//WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
+		w = new WebDriverWait(driver, Duration.ofSeconds(30));
+		//w.until(ExpectedConditions.visibilityOf(WelcomeMsg));
 		//String message = WelcomeMsg.getText();
 		//System.out.println(message);
 		//Assert.assertEquals("Welcome", message);
