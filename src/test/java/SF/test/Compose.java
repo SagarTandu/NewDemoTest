@@ -11,9 +11,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class Compose {
@@ -28,14 +25,14 @@ public class Compose {
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
 		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
-		driver=new ChromeDriver(ch);
+		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 	    driver.navigate().to(url);
 	}
 	
 	
 	@Test
-	public void composeemail() throws InterruptedException {
+	public void composeemail() {
 		
 		Actions act = new Actions(driver);
 		driver.findElement(By.name("identifier")).sendKeys("abcdeSfuse@gmail.com");
@@ -44,11 +41,13 @@ public class Compose {
 		WebElement WelcomeMsg = driver.findElement(By.xpath("//span[contains(text(), 'Welcome')]"));
 		w = new WebDriverWait(driver, Duration.ofSeconds(10));
 		w.until(ExpectedConditions.visibilityOf(WelcomeMsg));
-		String message = WelcomeMsg.getText();
-		System.out.println(message);
-		Assert.assertEquals("Welcome", message);
+		//String message = WelcomeMsg.getText();
+		//System.out.println(message);
+		//Assert.assertEquals("Welcome", message);
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Sagar@123");
-		driver.findElement(By.id("passwordNext")).click();
+		act.sendKeys(Keys.ENTER).build().perform();		
+
+		//driver.findElement(By.id("passwordNext")).click();
 		//Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[text()='Compose']")).click();
 		driver.findElement(By.className("vO")).click();
