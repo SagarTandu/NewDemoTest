@@ -9,8 +9,6 @@
       <class name="SF.test.Compose">
         <methods>
           <include name="composeemail"/>
-          <include name="browser"/>
-          <include name="close"/>
         </methods>
       </class> <!-- SF.test.Compose -->
     </classes>

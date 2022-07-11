@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 10.855 sec <<< FAILURE! - in TestSuite
+browser(SF.test.Compose)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.IllegalStateException: The driver executable must exist: C:\var\lib\jenkins\workspace\Automate\drivers\chromedriver
+	at SF.test.Compose.browser(Compose.java:28)
+
+close(SF.test.Compose)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at SF.test.Compose.close(Compose.java:67)
+
+composeemail(SF.test.Compose)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.IllegalArgumentException: Driver must be set
+	at SF.test.Compose.composeemail(Compose.java:37)
+
