@@ -7,16 +7,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class login {
 	
@@ -47,7 +42,7 @@ public void blank() {
 	driver.findElement(By.name("identifier")).sendKeys(" ");
 	act.sendKeys(Keys.ENTER).build().perform();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-	String text = driver.findElement(By.xpath("//*[text()='Enter an email or phone number']")).getText();
+	String text = driver.findElement(By.xpath("//*[tex()='Enter an email or phone number']")).getText();
 	System.out.println(text);
 	Assert.assertEquals("Enter an email or phone number", text);
 	
