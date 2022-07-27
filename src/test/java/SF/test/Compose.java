@@ -11,7 +11,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+//import SF.utility.JiraCreateIssue;
 
 public class Compose {
 	public WebDriver driver;
@@ -19,21 +22,20 @@ public class Compose {
 	public String url= "https://mail.google.com/";
 	public Actions act;
 
-	@Test 
+	@BeforeClass(alwaysRun=true)
 	public void browser() {
 		ChromeOptions ch = new ChromeOptions();
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
-	    ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
-		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sagar.tandu\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	    //ch.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--no-sandbox");		
+		//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Automate/drivers/chromedriver");
 		driver=new ChromeDriver(ch);
 		driver.manage().window().maximize();
 	    driver.navigate().to(url);
 	}
 	
-	
-	@Test
+//@JiraCreateIssue(isCreateIssue=true)
+@Test
 	public void composeemail() throws InterruptedException {
-		
 		Actions act = new Actions(driver);
 		driver.findElement(By.name("identifier")).sendKeys("abcdeSfuse@gmail.com");
 		act.sendKeys(Keys.ENTER).build().perform();		
@@ -55,14 +57,15 @@ public class Compose {
 		String sentmessage = driver.findElement(By.xpath("//span[text()='Message sent']")).getText();
 		System.out.println(sentmessage);
 	}
-	
+
+ //@JiraCreateIssue(isCreateIssue=true)
  @Test
  public void printText() {
 	 System.out.println("printing a demo sample text");
  }
 	
 	
- @Test
+// @Test
 	public void close() {
 		driver.quit();
 	}

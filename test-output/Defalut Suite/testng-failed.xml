@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite parallel="tests" name="Failed suite [Defalut Suite]" guice-stage="DEVELOPMENT" verbose="3">
   <listeners>
     <listener class-name="SF.listener.TestListener"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Test(failed)">
+  <test thread-count="5" parallel="tests" name=" First Test(failed)" verbose="3">
     <classes>
       <class name="SF.test.login">
         <methods>
+          <include name="blank"/>
           <include name="initialize"/>
-          <include name="invalidemail"/>
         </methods>
       </class> <!-- SF.test.login -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!--  First Test(failed) -->
+</suite> <!-- Failed suite [Defalut Suite] -->
